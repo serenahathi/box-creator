@@ -27,8 +27,12 @@ describe Box do
       expect { box.draw(5, 5) }.to output(five_by_five_box).to_stdout
     end
 
-    it "raises an error if the user tries to enter anything other than an integer" do
+    it "raises an error if the user enters non-integers" do
       expect { box.draw(3.17, 4.76) }.to raise_error "Please enter integers only"
+    end
+
+    it "raises an error if the user enters dimensions that are less than 2x2" do
+      expect { box.draw(1, 1) }.to raise_error "Please enter dimensions that are greater than or equal to 2x2"
     end
   end
 end

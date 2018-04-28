@@ -31,10 +31,14 @@ class Box
 
   def input_checks(width, height)
     raise "Please enter integers only" unless integer?(width, height)
+    raise "Please enter dimensions that are greater than or equal to 2x2" unless minimum_dimensions?(width, height)
   end
 
   def integer?(width, height)
     (width.is_a? Integer) && (height.is_a? Integer)
   end
 
+  def minimum_dimensions?(width, height)
+    width >= 2 && height >= 2
+  end
 end
