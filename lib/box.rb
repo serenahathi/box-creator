@@ -4,7 +4,7 @@ class Box
   TOP_RIGHT_CORNER = "\u2510"
   BOTTOM_LEFT_CORNER = "\u2514"
   BOTTOM_RIGHT_CORNER = "\u2518"
-  HORIZONTAL_EDGE = " - "
+  HORIZONTAL_EDGES = " - "
   VERTICAL_EDGE = "|"
 
   def draw(width, height)
@@ -15,19 +15,26 @@ class Box
   end
 
   def draw_top_row(width)
-    puts TOP_LEFT_CORNER + (HORIZONTAL_EDGE * (width - 2)) + TOP_RIGHT_CORNER
+    puts TOP_LEFT_CORNER + "#{horizontal_edges(width)}" + TOP_RIGHT_CORNER
   end
 
   def draw_middle_rows(width, height)
-    box_width = "   " * (width - 2)
-    (height - 2).times { puts VERTICAL_EDGE + box_width + VERTICAL_EDGE }
+    (height - 2).times { puts VERTICAL_EDGE + "#{vertical_spacing(width)}" + VERTICAL_EDGE }
   end
 
   def draw_bottom_row(width)
-    puts BOTTOM_LEFT_CORNER + HORIZONTAL_EDGE * (width - 2) + BOTTOM_RIGHT_CORNER
+    puts BOTTOM_LEFT_CORNER + "#{horizontal_edges(width)}" + BOTTOM_RIGHT_CORNER
   end
 
   private
+
+  def horizontal_edges(width)
+    HORIZONTAL_EDGES * (width - 2)
+  end
+
+  def vertical_spacing(width)
+    "   " * (width - 2)
+  end
 
   def input_checks(width, height)
     raise "Please enter integers only" unless integer?(width, height)
@@ -41,4 +48,5 @@ class Box
   def minimum_dimensions?(width, height)
     width >= 2 && height >= 2
   end
+
 end
