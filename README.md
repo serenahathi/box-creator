@@ -1,7 +1,7 @@
 
 # Box Creator
 
-[Summary](#summary) | [Quickstart](#quickstart) | [Running Tests](#tests) | [Sample Output](#output) | [Approach](#approach)
+[Summary](#summary) | [Quickstart](#quickstart) | [Running Tests](#running-tests) | [Sample Output](#sample-output) | [Approach](#approach)
 
 <a id ="#summary"></a>
 
@@ -25,14 +25,14 @@ Example output:
 $ git clone https://github.com/serenahathi/box-creator.git
 ```
 
-* Install dependencies by running the following command in the root of the project directory:
+* Navigate to the root of the project directory and install dependencies by running the following command in the terminal:
 
 ```
 $ bundle install
 ```
 
 
-* Navigate to the root of the project directory in the terminal and open irb: 
+* Open irb: 
 
 ```
 $ irb
@@ -56,7 +56,8 @@ $ box = Box.new
 $ box.draw(3,3)
 ```
 
-<a id ="#tests"></a>
+
+<a id ="#running-tests"></a>
 
 ## Running Tests
 
@@ -70,7 +71,8 @@ $ rspec
 
 <img width = "900" src="https://user-images.githubusercontent.com/29439776/39401742-b8c6e670-4b44-11e8-8049-75c5567a5176.png">
 
-<a id ="#output"></a>
+
+<a id ="#sample-output"></a>
 
 ## Sample Output
 
