@@ -1,17 +1,11 @@
-require 'box_creator'
+require 'box'
 
-describe BoxCreator do
+describe Box do
   let(:box) { described_class.new }
 
   describe "#draw_top_row" do
     it "draws the top row of a box based of any given width" do
       expect { box.draw_top_row(4) }.to output("┌ -  - ┐\n").to_stdout
-    end
-  end
-
-  describe "#draw_bottom_row" do
-    it "draws the bottom row of a box based of any given width" do
-      expect { box.draw_bottom_row(4) }.to output("└ -  - ┘\n").to_stdout
     end
   end
 
@@ -21,10 +15,16 @@ describe BoxCreator do
     end
   end
 
-  describe "#draw_box" do
+  describe "#draw_bottom_row" do
+    it "draws the bottom row of a box based of any given width" do
+      expect { box.draw_bottom_row(4) }.to output("└ -  - ┘\n").to_stdout
+    end
+  end
+
+  describe "#draw" do
     it "draws an entire box based on any given width and height" do
       five_by_five_box = "┌ -  -  - ┐\n|         |\n|         |\n|         |\n└ -  -  - ┘\n"
-      expect { box.draw_box(5, 5) }.to output(five_by_five_box).to_stdout
+      expect { box.draw(5, 5) }.to output(five_by_five_box).to_stdout
     end
   end
 end
