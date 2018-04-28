@@ -5,6 +5,7 @@ class BoxCreator
   BOTTOM_LEFT_CORNER = "\u2514"
   BOTTOM_RIGHT_CORNER = "\u2518"
   HORIZONTAL_EDGE = "\u2576 "
+  VERTICAL_EDGE = "\u2577"
 
   def draw_box(width)
     draw_top_row(width)
@@ -12,7 +13,12 @@ class BoxCreator
   end
 
   def draw_top_row(width)
-    puts TOP_LEFT_CORNER + HORIZONTAL_EDGE * (width - 2) + TOP_RIGHT_CORNER
+    puts TOP_LEFT_CORNER + (HORIZONTAL_EDGE * (width - 2)) + TOP_RIGHT_CORNER
+  end
+
+  def draw_middle_rows(width)
+    box_width = " " * width
+    puts VERTICAL_EDGE + box_width + VERTICAL_EDGE
   end
 
   def draw_bottom_row(width)

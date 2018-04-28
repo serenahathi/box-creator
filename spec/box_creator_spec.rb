@@ -17,10 +17,10 @@ describe BoxCreator do
     end
   end
 
-  describe "#draw_box" do
-    it "draws an entire box based on any given width" do
-      four_by_fourbox = "┌╶ ╶ ┐\n└╶ ╶ ┘\n"
-      expect { box.draw_box(4) }.to output(four_by_fourbox).to_stdout
+  describe "#draw_middle_rows" do
+    it "draws the middle rows of a box based on any given width" do
+      middle_rows = "╷    ╷\n"
+      expect { box.draw_middle_rows(4) }.to output(middle_rows).to_stdout
     end
   end
 end
