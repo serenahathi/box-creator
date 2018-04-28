@@ -31,7 +31,14 @@ $ git clone https://github.com/serenahathi/box-creator.git
 $ bundle install
 ```
 
-* Navigate to the project directory in the terminal and run the following command:
+
+* Navigate to the root of the project directory in the terminal and open irb: 
+
+```
+$ irb
+```
+
+* Require the file:
 
 ```
 $ require './lib/box.rb'
@@ -61,7 +68,7 @@ $ rspec
 
 - Coverage summary:
 
-<img width = "800" src="https://user-images.githubusercontent.com/29439776/39401742-b8c6e670-4b44-11e8-8049-75c5567a5176.png">
+<img width = "900" src="https://user-images.githubusercontent.com/29439776/39401742-b8c6e670-4b44-11e8-8049-75c5567a5176.png">
 
 <a id ="#output"></a>
 
