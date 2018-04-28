@@ -38,6 +38,40 @@ $ rspec
 
 ## Sample Output
 
+```
+2.4.1 :001 > box = Box.new
+ => #<Box:0x007ff52013c5a0>
+
+2.4.1 :002 > box.draw(4,4)
+┌ ╶  ╶ ┐
+╷      ╷
+╷      ╷
+└ ╶  ╶ ┘
+ => nil
+
+2.4.1 :003 > box.draw(3,5)
+┌ ╶ ┐
+╷   ╷
+╷   ╷
+╷   ╷
+└ ╶ ┘
+ => nil
+
+2.4.1 :004 > box.draw(5,8)
+┌ ╶  ╶  ╶ ┐
+╷         ╷
+╷         ╷
+╷         ╷
+╷         ╷
+╷         ╷
+╷         ╷
+└ ╶  ╶  ╶ ┘
+ => nil
+
+2.4.1 :005 > box.draw(1,1)
+RuntimeError: Please enter dimensions that are greater than or equal to 2x2
+```
+
 <a id ="#approach"></a>
 
 ## Approach
