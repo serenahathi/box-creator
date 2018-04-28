@@ -4,11 +4,17 @@ class Box
   TOP_RIGHT_CORNER = "\u2510"
   BOTTOM_LEFT_CORNER = "\u2514"
   BOTTOM_RIGHT_CORNER = "\u2518"
-  HORIZONTAL_EDGES = " - "
-  VERTICAL_EDGE = "|"
-
+  HORIZONTAL_EDGE = " \u2576 "
+  VERTICAL_EDGE = "\u2577"
+  
   def draw(width, height)
     input_checks(width, height)
+    box_builder(width, height)
+  end
+
+  private
+
+  def box_builder(width, height)
     draw_top_row(width)
     draw_middle_rows(width, height)
     draw_bottom_row(width)
@@ -26,10 +32,8 @@ class Box
     puts BOTTOM_LEFT_CORNER + "#{horizontal_edges(width)}" + BOTTOM_RIGHT_CORNER
   end
 
-  private
-
   def horizontal_edges(width)
-    HORIZONTAL_EDGES * (width - 2)
+    HORIZONTAL_EDGE * (width - 2)
   end
 
   def vertical_spacing(width)
