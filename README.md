@@ -1,3 +1,4 @@
+
 # Box Creator
 
 [Summary](#summary) | [Quickstart](#quickstart) | [Running Tests](#tests) | [Sample Output](#output) | [Approach](#approach)
@@ -18,10 +19,34 @@ Example output:
 
 ## Quickstart
 
-* Clone the directory by running the following command in the terminal:
+- Ensure you have Ruby and [Bundler](http://bundler.io/) installed and then clone the repository by running the following command:
 
 ```
 $ git clone https://github.com/serenahathi/box-creator.git
+```
+
+* Install dependencies by running the following command in the root of the project directory:
+
+```
+$ bundle install
+```
+
+* Navigate to the project directory in the terminal and run the following command:
+
+```
+$ require './lib/box.rb'
+```
+
+* Create a new instance of the Box class and assign it to a variable. For example:
+
+```
+$ box = Box.new
+```
+
+* Call the *draw* method on the variable, passing in a width and height. For example:
+
+```
+$ box.draw(3,3)
 ```
 
 <a id ="#tests"></a>
@@ -33,6 +58,10 @@ $ git clone https://github.com/serenahathi/box-creator.git
 ```
 $ rspec
 ```
+
+- Coverage summary:
+
+<img width = "800" src="https://user-images.githubusercontent.com/29439776/39401742-b8c6e670-4b44-11e8-8049-75c5567a5176.png">
 
 <a id ="#output"></a>
 
