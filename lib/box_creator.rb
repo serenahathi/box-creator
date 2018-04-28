@@ -10,7 +10,7 @@ class BoxCreator
     puts TOP_LEFT_CORNER + HORIZONTAL_EDGE * (width - 2) + TOP_RIGHT_CORNER
   end
 
-  def draw_bottom_row
-    puts BOTTOM_LEFT_CORNER + BOTTOM_RIGHT_CORNER
+  def draw_bottom_row(width)
+    puts BOTTOM_LEFT_CORNER + HORIZONTAL_EDGE * (width - 2) + BOTTOM_RIGHT_CORNER
   end
 end
