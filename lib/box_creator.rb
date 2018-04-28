@@ -7,4 +7,8 @@ class BoxCreator
     puts TOP_LEFT_CORNER + TOP_RIGHT_CORNER
   end
 
+  def draw_bottom_row
+    puts "\u2514" "\u2518"
+  end
+
 end
