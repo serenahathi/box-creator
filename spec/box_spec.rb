@@ -11,42 +11,42 @@ describe Box do
     end
 
     it "draws a 4x4 square" do
-      four_by_four_square = "┌ -  - ┐\n|      |\n|      |\n└ -  - ┘\n"
+      four_by_four_square = "┌ ╶  ╶ ┐\n╷      ╷\n╷      ╷\n└ ╶  ╶ ┘\n"
       expect { box.draw(4, 4) }.to output(four_by_four_square).to_stdout
     end
 
     it "draws a 6x6 square" do
-      six_by_six_square = "┌ -  -  -  - ┐\n|            |\n|            |\n|            |\n|            |\n└ -  -  -  - ┘\n"
+      six_by_six_square =  "┌ ╶  ╶  ╶  ╶ ┐\n╷            ╷\n╷            ╷\n╷            ╷\n╷            ╷\n└ ╶  ╶  ╶  ╶ ┘\n"
       expect { box.draw(6, 6) }.to output(six_by_six_square).to_stdout
     end
 
     it "draws a 3x2 rectangle" do
-      three_by_two_rectangle = "┌ - ┐\n└ - ┘\n"
+      three_by_two_rectangle = "┌ ╶ ┐\n└ ╶ ┘\n"
       expect { box.draw(3, 2) }.to output(three_by_two_rectangle).to_stdout
     end
 
     it "draws a 4x2 rectangle" do
-      four_by_two_rectangle = "┌ -  - ┐\n└ -  - ┘\n"
+      four_by_two_rectangle = "┌ ╶  ╶ ┐\n└ ╶  ╶ ┘\n"
       expect { box.draw(4, 2) }.to output(four_by_two_rectangle).to_stdout
     end
 
     it "draws a 8x5 rectangle" do
-      eight_by_five_rectangle = "┌ -  -  -  -  -  - ┐\n|                  |\n|                  |\n|                  |\n└ -  -  -  -  -  - ┘\n"
+      eight_by_five_rectangle = "┌ ╶  ╶  ╶  ╶  ╶  ╶ ┐\n╷                  ╷\n╷                  ╷\n╷                  ╷\n└ ╶  ╶  ╶  ╶  ╶  ╶ ┘\n"
       expect { box.draw(8, 5) }.to output(eight_by_five_rectangle).to_stdout
     end
 
-    it "draws a 2x3 rectangle" do
-      two_by_three_rectangle = "┌┐\n||\n└┘\n"
-      expect { box.draw(2, 3) }.to output(two_by_three_rectangle).to_stdout
+    it "draws a 5x2 rectangle" do
+      five_by_two_rectangle = "┌ ╶  ╶  ╶ ┐\n└ ╶  ╶  ╶ ┘\n"
+      expect { box.draw(5, 2) }.to output(five_by_two_rectangle).to_stdout
     end
 
     it "draws a 4x6 rectangle" do
-      four_by_six_rectangle = "┌ -  - ┐\n|      |\n|      |\n|      |\n|      |\n└ -  - ┘\n"
+      four_by_six_rectangle = "┌ ╶  ╶ ┐\n╷      ╷\n╷      ╷\n╷      ╷\n╷      ╷\n└ ╶  ╶ ┘\n"
       expect { box.draw(4, 6) }.to output(four_by_six_rectangle).to_stdout
     end
 
     it "draws a 5x7 rectangle" do
-      five_by_seven_rectangle = "┌ -  -  - ┐\n|         |\n|         |\n|         |\n|         |\n|         |\n└ -  -  - ┘\n"
+      five_by_seven_rectangle = "┌ ╶  ╶  ╶ ┐\n╷         ╷\n╷         ╷\n╷         ╷\n╷         ╷\n╷         ╷\n└ ╶  ╶  ╶ ┘\n"
       expect { box.draw(5, 7) }.to output(five_by_seven_rectangle).to_stdout
     end
 
