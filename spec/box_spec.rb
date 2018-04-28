@@ -26,5 +26,9 @@ describe Box do
       five_by_five_box = "┌ -  -  - ┐\n|         |\n|         |\n|         |\n└ -  -  - ┘\n"
       expect { box.draw(5, 5) }.to output(five_by_five_box).to_stdout
     end
+
+    it "raises an error if the user tries to enter anything other than an integer" do
+      expect { box.draw(3.17, 4.76) }.to raise_error "Please enter integers only"
+    end
   end
 end

@@ -8,6 +8,7 @@ class Box
   VERTICAL_EDGE = "|"
 
   def draw(width, height)
+    input_checks(width, height)
     draw_top_row(width)
     draw_middle_rows(width, height)
     draw_bottom_row(width)
@@ -25,5 +26,15 @@ class Box
   def draw_bottom_row(width)
     puts BOTTOM_LEFT_CORNER + HORIZONTAL_EDGE * (width - 2) + BOTTOM_RIGHT_CORNER
   end
-  
+
+  private
+
+  def input_checks(width, height)
+    raise "Please enter integers only" unless integer?(width, height)
+  end
+
+  def integer?(width, height)
+    (width.is_a? Integer) && (height.is_a? Integer)
+  end
+
 end
