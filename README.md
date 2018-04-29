@@ -114,10 +114,10 @@ RuntimeError: Please enter dimensions that are greater than or equal to 2x2
 ## Approach
 
 - I began by breaking down the task into smaller component parts and identified four key milestones:
-  1. Being able draw a 2x2 box with no user input
-  2. Being able to draw a box of any given width with a fixed height of 2
-  3. Being able to draw a box of any given width and a fixed height of 3
-  4. Being able to draw a box of any given width and height
+  - Being able draw a 2x2 box with no user input
+  -  Being able to draw a box of any given width with a fixed height of 2
+  - Being able to draw a box of any given width and a fixed height of 3
+  - Being able to draw a box of any given width and height
 
 - Taking an iterative approach, I worked through each part one at a time building upon the functionality implemented in the previous step.
 
@@ -128,5 +128,5 @@ RuntimeError: Please enter dimensions that are greater than or equal to 2x2
 - Once the main logic was implemented, I refactored further by:
     - Abstracting the methods used to build the box 
     - Abstracting the methods used to defend against edge cases
-    - Amending areas of duplication such as the creation of the horizontal edges that make up the top and bottom rows of a box to adhere to DRY principles.
+    - Amending areas of duplication such as the creation of the horizontal edges that make up the top and bottom rows of a box to adhere to DRY principles
     
